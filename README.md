@@ -1,7 +1,7 @@
-# Raahi - Fishing Mini Game
-## KALP Studio Unity Developer Assessment
+# Reel-O-Fish
+## Unity Developer Assessment for KALP Studio
 
-A slice-of-life fishing adventure game featuring a polished main menu and complete fishing minigame with state machine architecture.
+A fishing mini-game featuring a polished main menu and complete fishing gameplay with state machine architecture.
 
 ---
 
@@ -140,6 +140,19 @@ Assets/
 
 All assets are **free and properly licensed** for commercial use:
 
+### 3D Character Models
+- **Mixamo**: https://www.mixamo.com/
+  - Free rigged characters with animations
+  - Fisherman/casual character models available
+  - Auto-rigging service for custom models
+  - License: Free for commercial use (requires Adobe account)
+
+### 3D Environment Models
+- **Cat Island (Fisherman Hut)**: https://sketchfab.com/3d-models/cat-island-e7a30e57808a46c9a56b1b1a2b378ac0
+  - Stylized fishing hut and dock environment
+  - Low-poly aesthetic perfect for the game
+  - License: Check Sketchfab model page for specific license
+
 ### UI Assets
 - **Kenney UI Pack**: https://kenney-assets.itch.io/ui-pack
   - 400+ UI sprites in multiple colors
@@ -274,7 +287,7 @@ All assets are **free and properly licensed** for commercial use:
 
 ### Playing the Build
 1. Navigate to the `Build/` folder
-2. Run `RaahiFishing.exe` (Windows)
+2. Run `ReelOFish.exe` (Windows)
 3. Enjoy!
 
 ### Building from Unity
