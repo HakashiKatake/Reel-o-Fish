@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using RaahiFishing.Data;
 using RaahiFishing.Audio;
 
@@ -11,7 +12,7 @@ namespace RaahiFishing.Fishing.Mechanics
     /// </summary>
     public class TensionBarMechanic : MonoBehaviour, IReelMechanic
     {
-        [Header("UI References")]
+        [Header("UI References - REQUIRED")]
         [SerializeField] private Slider tensionSlider;
         [SerializeField] private Image fillImage;
         [SerializeField] private RectTransform sweetSpotIndicator;
@@ -42,6 +43,7 @@ namespace RaahiFishing.Fishing.Mechanics
             }
 
             UpdateSweetSpotPosition();
+            UpdateFillColor(Color.yellow);
         }
 
         public ReelResult UpdateMechanic()
@@ -91,19 +93,25 @@ namespace RaahiFishing.Fishing.Mechanics
             {
                 // Outside sweet spot - reset progress
                 successTimer = Mathf.Max(0, successTimer - Time.deltaTime * 0.5f);
-                UpdateFillColor(Color.yellow);
+                
+                if (currentTension > sweetSpotMax)
+                {
+                    UpdateFillColor(Color.red); // Too high
+                }
+                else
+                {
+                    UpdateFillColor(Color.yellow); // Too low
+                }
             }
 
             // Check failure conditions
             if (currentTension >= 1f)
             {
-                // Line snapped!
                 isActive = false;
                 return ReelResult.Failure;
             }
             else if (currentTension <= 0f)
             {
-                // Fish escaped!
                 isActive = false;
                 return ReelResult.Failure;
             }

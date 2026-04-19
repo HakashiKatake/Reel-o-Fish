@@ -27,6 +27,9 @@ namespace RaahiFishing.UI
 
         private List<FishData> caughtFish = new List<FishData>();
 
+        // Public property to access the reel mechanic panel
+        public GameObject ReelMechanicPanel => reelMechanicPanel;
+
         private void Awake()
         {
             if (Instance == null)

@@ -23,15 +23,19 @@ namespace RaahiFishing.Fishing.States
         {
             if (FishingUI.Instance != null)
             {
-                FishingUI.Instance.UpdateStateText("Reel it in!");
+                FishingUI.Instance.UpdateStateText("Reel it in! Tap SPACE!");
                 FishingUI.Instance.ShowReelMechanic();
                 
-                // Get the reel mechanic component
-                reelMechanic = FishingUI.Instance.GetComponent<IReelMechanic>();
-                
-                if (reelMechanic != null)
+                // Get the reel mechanic from the panel
+                GameObject reelPanel = FishingUI.Instance.ReelMechanicPanel;
+                if (reelPanel != null)
                 {
-                    reelMechanic.Initialize(fishingManager.CurrentFish);
+                    reelMechanic = reelPanel.GetComponent<IReelMechanic>();
+                    
+                    if (reelMechanic != null)
+                    {
+                        reelMechanic.Initialize(fishingManager.CurrentFish);
+                    }
                 }
             }
         }
@@ -50,7 +54,6 @@ namespace RaahiFishing.Fishing.States
                 {
                     fishingManager.OnCatchFailed();
                 }
-                // ReelResult.InProgress continues the loop
             }
         }
 
