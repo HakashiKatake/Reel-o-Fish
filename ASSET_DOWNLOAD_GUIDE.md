@@ -166,7 +166,7 @@ Assets/Art/Sprites/
 ## 5. 🌊 Water & Background Textures (Optional)
 
 ### Option A: Kenney Assets
-**Source**: https://kenney.nl/assets/background-elements
+**Source**: https://kenney.nl/ass ets/background-elements
 **License**: CC0 (Public Domain)
 
 ### Option B: OpenGameArt

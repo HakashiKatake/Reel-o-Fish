@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 454e924bab954414984f1df0e0fa6242
+guid: d94f9278b1d7a49a7bcef1ff15f10c5c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kenney Future
+  - Jersey 10
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
